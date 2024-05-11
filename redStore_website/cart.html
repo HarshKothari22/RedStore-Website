@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore E-commerce Website</title>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="RedStore-images" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>    
+                </ul>
+            </nav>
+            <a href="cart.html"><img class="cartImg" src="images/cart.png" alt="cart" width="30px" height="30px"></a>
+            <img src="images/menu.png" alt="menu" class="menu-icon" onclick="menuetoggle()">
+        </div>
+    </div>
+<!--------------- card item details -------------->
+<div class="small-containers cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotsl</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-1.jpg" alt="">
+                    <div>
+                        <p>Puma Printed T-Shirt(Red)</p>
+                        <small>Price: $49.00</small>
+                        <br>
+                        <a class="removeTr" href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input class="productQuantity1" type="number" value="1" min="0"></td>
+            <td class="productPrice1 productPrice">$49.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-2.jpg" alt="">
+                    <div>
+                        <p>HRX Sports Shoes(black)</p>
+                        <small>Price: $159.00</small>
+                        <br>
+                        <a class="removeTr" href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input class="productQuantity2" type="number" value="1" min="0"></td>
+            <td class="productPrice2 productPrice">$159.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-3.jpg" alt="">
+                    <div>
+                        <p>Benetton Lower(Grey)</p>
+                        <small>Price: $99.00</small>
+                        <br>
+                        <a class="removeTr" href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input class="productQuantity3" type="number" value="1" min="0"></td>
+            <td class="productPrice3 productPrice">$99.00</td>
+        </tr>
+    </table>
+
+
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td class="totalProductPrice">$00.00</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td class="taxPrice">$35.00</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td class="finalPrice">$00.00</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+ <!---------------- footer ------------------->   
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <a href="https://play.google.com/store/games?hl=en&gl=US&pli=1"><img src="images/play-store.png" alt=""></a>
+                    <a href="https://www.apple.com/in/app-store/"><img src="images/app-store.png" alt=""></a>
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <a href="index.html"><img src="images/logo-white.png" alt=""></a>
+                <p>Our Purpose Is To Sustainably Make The Pleasure and Benefits of Sports Accessible to the Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2024 - Harsh kothari</p>
+    </div>
+</div>
+<!-- -->
+<!-- <script src="js/app.js"></script> -->
+<script>
+// This is for the menutoggle
+var menuItems = document.getElementById("menuItems");
+menuItems.style.maxHeight = "0px";
+
+function menuetoggle(){
+    if(menuItems.style.maxHeight == "0px"){
+        menuItems.style.maxHeight = "200px"
+    }else{
+        menuItems.style.maxHeight = "0px"
+    }
+}
+// removing the TR on click of the remove
+    var removeLinks = document.querySelectorAll('.removeTr');
+    removeLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var row = this.closest('tr');
+            row.parentNode.removeChild(row);
+            updateTotalPrice();
+            updateTaxPrice();
+            updateFinalPrice();
+        });
+    });
+
+// Calculating the total price
+function calculateTotalPrice() {
+    var productPrices = document.querySelectorAll('.productPrice');
+    var totalProductPrice = 0;
+    productPrices.forEach(function(price) {
+        totalProductPrice += parseFloat(price.textContent.replace('$', ''));
+    });
+    return totalProductPrice.toFixed(2);
+}
+function updateTotalPrice() {
+    var totalProductPriceElement = document.querySelector('.totalProductPrice');
+    var totalProductPrice = calculateTotalPrice();
+    totalProductPriceElement.textContent = '$' + totalProductPrice;
+}
+updateTotalPrice();
+
+
+// Calculating and updating the total tax
+function updateTaxPrice(){
+var taxPriceElement = document.querySelector(".taxPrice");
+var totalProductTaxPrice = (calculateTotalPrice()/100)*12;
+var finalTotalProductTaxPrice =  totalProductTaxPrice.toFixed(2);
+taxPriceElement.textContent = '$' + finalTotalProductTaxPrice;
+return finalTotalProductTaxPrice;
+}
+updateTaxPrice();
+
+// calculating and updating he final price
+    function updateFinalPrice(){
+    var finalPriceElement = document.querySelector(".finalPrice");
+    var totalFinalPrice = calculateTotalPrice();
+    var totalTaxPrice = updateTaxPrice();
+    // var overallFinalPriceElement = totalFinalPrice + totalTaxPrice;
+    let overallFinalPriceElement = Number(totalFinalPrice)  + Number(totalTaxPrice);
+    var conertToString = overallFinalPriceElement.toFixed(2);
+    // console.log(finalPrice)
+    finalPriceElement.textContent = '$' + conertToString;
+    // console.log(totalTaxPrice);
+    }
+    updateFinalPrice();
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// for changing and updating the price with increasing the value
+   var productQuantity1 = document.querySelector(".productQuantity1");
+    var productPrice1 = document.querySelector(".productPrice1");
+
+    productQuantity1.addEventListener('change', function(){
+        productPrice1.textContent = '$' + (productQuantity1.value * 49.00).toFixed(2);
+        updateTotalPrice();
+        updateTaxPrice();
+        updateFinalPrice();
+    });
+    var productQuantity2 = document.querySelector(".productQuantity2");
+    var productPrice2 = document.querySelector(".productPrice2");
+
+    productQuantity2.addEventListener('change', function(){
+        productPrice2.textContent = '$' + (productQuantity2.value * 159.00).toFixed(2);
+        updateTotalPrice();
+        updateTaxPrice();
+        updateFinalPrice();
+    });
+    var productQuantity3 = document.querySelector(".productQuantity3");
+    var productPrice3 = document.querySelector(".productPrice3");
+
+    productQuantity3.addEventListener('change', function(){
+        productPrice3.textContent = '$' + (productQuantity3.value * 99.00).toFixed(2);
+        updateTotalPrice();
+        updateTaxPrice();
+        updateFinalPrice();
+    });
+
+</script>
+<script src="https://kit.fontawesome.com/e546f98c54.js" crossorigin="anonymous"></script>
+</body>
+</html>

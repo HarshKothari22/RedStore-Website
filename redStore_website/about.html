@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore E-commerce Website</title>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+ <!---------------- header ------------------->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="RedStore-images" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>    
+                </ul>
+            </nav>
+            <a href="cart.html"><img class="cartImg" src="images/cart.png" alt="cart" width="30px" height="30px"></a>
+            <img src="images/menu.png" alt="menu" class="menu-icon" onclick="menuetoggle()">
+        </div>
+    </div>
+
+     <!---------------- about-page ------------------->
+    <div class="about-page">
+        <div class="container">
+                <div class="aboutHeading">
+                    <h1>ABOUT</h1>
+                </div>
+                <div class="aboutParagraph">
+                    <p>Welcome to Red Store Athletics Choice Company, where passion meets performance. Established in 2005, we have evolved from a small local retailer to a leading name in the athletic equipment and apparel industry. Our dedication to quality, innovation, and customer satisfaction has been the cornerstone of our success.</p>
+        
+                    <h3>Our Philosophy</h3>
+        
+                    <p>At Red Store Athletics Choice Company, we believe that everyone, regardless of their skill level, deserves access to high-quality athletic gear that can help them perform at their best. Our mission is to empower athletes of all ages and abilities by providing them with top-notch products that enhance their performance and enjoyment of sports.</p>
+        
+                    <h3>Quality and Innovation</h3>
+        
+                    <p>We are committed to excellence in everything we do. Our team of experts rigorously tests each product to ensure it meets our stringent quality standards. We also stay at the forefront of technological advancements and design trends to offer you the latest and greatest in athletic equipment and apparel.</p>
+        
+                    <h3>Customer Satisfaction</h3>
+        
+                    <p>Your satisfaction is our priority. Our knowledgeable and friendly staff are always ready to assist you in finding the perfect gear to suit your needs. Whether you're a seasoned athlete or just starting out, we are here to help you make informed decisions and get the most out of your shopping experience with us.</p>
+        
+                    <h3>Community Engagement</h3>
+        
+                    <p>We are more than just a store; we are a part of the community. We are proud supporters of local sports teams, events, and initiatives that promote active and healthy lifestyles. Through our involvement, we aim to inspire and encourage others to pursue their athletic goals and live life to the fullest.</p>
+        
+                    <h3>Join Us</h3>
+        
+                    <p>We invite you to explore our extensive range of products online or visit us at one of our conveniently located stores. Experience the Red Store Athletics Choice Company difference today and discover why we are the preferred choice for athletes across the country.</p>
+        
+                    <p><span class="change">Thank you </span> for choosing Red Store Athletics Choice Company. Let's achieve greatness together!</p>
+                        
+                </div>
+        </div>
+    </div>
+     <!---------------- footer ------------------->   
+     <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <a href="https://play.google.com/store/games?hl=en&gl=US&pli=1"><img src="images/play-store.png" alt=""></a>
+                        <a href="https://www.apple.com/in/app-store/"><img src="images/app-store.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <a href="index.html"><img src="images/logo-white.png" alt=""></a>
+                    <p>Our Purpose Is To Sustainably Make The Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Harsh kothari</p>
+        </div>
+    </div>
+    <!-- -->
+    <!-- <script src="js/app.js"></script> -->
+    <script>
+    var menuItems = document.getElementById("menuItems");
+menuItems.style.maxHeight = "0px";
+
+function menuetoggle(){
+    if(menuItems.style.maxHeight == "0px"){
+        menuItems.style.maxHeight = "200px"
+    }else{
+        menuItems.style.maxHeight = "0px"
+    }
+}
+    </script>
+    <script src="https://kit.fontawesome.com/e546f98c54.js" crossorigin="anonymous"></script>
+    </body>
+    </html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore E-commerce Website</title>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+ <!---------------- header ------------------->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="RedStore-images" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>    
+                </ul>
+            </nav>
+            <a href="cart.html"><img class="cartImg" src="images/cart.png" alt="cart" width="30px" height="30px"></a>
+            <img src="images/menu.png" alt="menu" class="menu-icon" onclick="menuetoggle()">
+        </div>
+    </div>
+
+     <!---------------- contact-page ------------------->
+<div class="contact-page">
+    <div class="container">
+        <div class="contactUsRow">
+            <div class="col-contactUs stylingclass">
+                <div class="contactUsCol-2">
+                    <div class="box-1">
+                        <img src="images/pin.png" alt="">
+                        <h5>OUR MAIN OFFICE</h5>
+                        <p>SoHo 94 Broadway St New York, NY 1001</p>
+                    </div>
+                    <div class="box-1">
+                        <img src="images/phone.png" alt="">
+                        <h5>PHONE NUMBER</h5>
+                        <p>234-9876-5400
+                            888-0123-4567 (Toll Free)</p>
+                        </div>
+                    
+                </div>
+
+                <div class="contactUsCol-2">
+                    
+                        <div class="box-2">
+                            <img src="images/fax.png" alt="">
+                            <h5>FAX</h5>
+                            <p>1-234-567-8900</p>
+                        </div>
+                        <div class="box-2">
+                            <img src="images/email.png" alt="">
+                            <h5>EMAIL</h5>
+                            <p>redstore@gmail.com</p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-contactUs col-contactUsStyling">
+                <h1>Contact Us</h1>
+                <form id="contactUsForm">
+                    <input type="text" id="contactUsName" placeholder="Enter Your Name" required>
+                    <input type="email" id="contactUsEmail" placeholder="Enter a valid email address" required>
+                    <textarea id="contactUstextarea" cols="30" rows="10" placeholder="Comments..."></textarea>
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+     <!---------------- footer ------------------->   
+     <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <a href="https://play.google.com/store/games?hl=en&gl=US&pli=1"><img src="images/play-store.png" alt=""></a>
+                        <a href="https://www.apple.com/in/app-store/"><img src="images/app-store.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <a href="index.html"><img src="images/logo-white.png" alt=""></a>
+                    <p>Our Purpose Is To Sustainably Make The Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Harsh kothari</p>
+        </div>
+    </div>
+    <!-- -->
+    <!-- <script src="js/app.js"></script> -->
+    <script>
+    var menuItems = document.getElementById("menuItems");
+    menuItems.style.maxHeight = "0px";
+
+    function menuetoggle(){
+    if(menuItems.style.maxHeight == "0px"){
+        menuItems.style.maxHeight = "200px"
+    }else{
+        menuItems.style.maxHeight = "0px"
+    }
+}
+    </script>
+    <script src="https://kit.fontawesome.com/e546f98c54.js" crossorigin="anonymous"></script>
+    </body>
+    </html>
